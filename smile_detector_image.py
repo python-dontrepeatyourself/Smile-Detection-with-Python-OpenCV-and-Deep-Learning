@@ -37,4 +37,3 @@ for (x, y, w, h) in face_rects:
             0.75, blue, 2)
 cv2.imshow("image", image)
 cv2.waitKey(0)
-

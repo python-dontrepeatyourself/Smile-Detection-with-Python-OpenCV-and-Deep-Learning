@@ -117,10 +117,6 @@ history = model.fit(X_train, y_train,
 # save the model
 model.save("model")
 
-# Evaluate the model on the test set
-test_loss, test_accuracy = model.evaluate(X_test, y_test)
-print(f'Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy * 100:.2f}%')
-
 # plot the learning curves of the training and validation accuracy/loss
 acc = history.history['accuracy']
 val_acc = history.history['val_accuracy']
@@ -140,3 +136,7 @@ plt.legend()
 
 plt.show()
 
+
+# Evaluate the model on the test set
+test_loss, test_accuracy = model.evaluate(X_test, y_test)
+print(f'Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy * 100:.2f}%')
