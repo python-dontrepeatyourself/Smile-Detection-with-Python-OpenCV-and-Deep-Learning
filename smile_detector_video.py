@@ -6,8 +6,9 @@ blue = (255, 0, 0)
 
 video_capture = cv2.VideoCapture(0)
 
-# load the haar cascades face and smile detectors
+# load the haar cascade face detector
 face_detector = cv2.CascadeClassifier("haar_cascade/haarcascade_frontalface_default.xml")
+# load our trained model
 model = load_model("model")
 
 # loop over the frames

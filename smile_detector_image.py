@@ -12,8 +12,9 @@ image = cv2.imread("images/1.jpg")
 image = cv2.resize(image, (width, height))
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-# load the haar cascades face and smile detectors
+# load the haar cascade face detector
 face_detector = cv2.CascadeClassifier("haar_cascade/haarcascade_frontalface_default.xml")
+# load our trained model
 model = load_model("model")
 
 # detect faces in the grayscale image
