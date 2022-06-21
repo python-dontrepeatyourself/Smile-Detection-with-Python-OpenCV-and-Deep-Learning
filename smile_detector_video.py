@@ -30,6 +30,7 @@ while True:
         # Applying CLAHE to the face ROI
         clahe = cv2.createCLAHE(clipLimit=2.5, tileGridSize=(8,8))
         roi_clahe = clahe.apply(roi)
+        cv2.imshow("CLAHE", roi_clahe)
         
         roi = cv2.resize(roi_clahe, (32, 32))
         roi = roi / 255.0
@@ -43,8 +44,6 @@ while True:
         cv2.putText(frame, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX,
                 0.75, blue, 2)
          
-                
-    cv2.imshow("CLAHE", roi_clahe)
     cv2.imshow('Frame', frame)
    
     # wait for 1 milliseconde and if the q key is pressed, we break the loop
